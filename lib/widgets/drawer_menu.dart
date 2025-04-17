@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/widgets/projects_section.dart';
 
@@ -19,29 +20,46 @@ class DrawerMenu extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                  color: Color.from(
-                      red: 255, green: 255, blue: 255, alpha: 0.7
-                  )
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF1A237E), // Dark blue
+                    Color(0xFF00BCD4), // Cyan
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
               ),
               child: Text(
-                'Menu',
-                style: TextStyle(color: Colors.white),
+                'Sudip DevLabs',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 28,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 2, // Adds a bit of space between letters for elegance
+                ),
               ),
             ),
-            ListTile(title: const Text('Home'), onTap: () {
+            */
+/*ListTile(title: const Text('Home'), onTap: () {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => PortfolioHome()),
               );
-            }),
-            ListTile(title: const Text('Projects'), onTap: () {
+            }),*//*
+
+            */
+/*ListTile(title: const Text('Projects'), onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ProjectsSection()),
               );
-            }),
-            ListTile(title: const Text('Tech Journal'), onTap: () {}),
-            //ListTile(title: const Text('Contact'), onTap: () {}),
+            }),*//*
+
+            */
+/*ListTile(title: const Text('Tech Journal'), onTap: () {}),*//*
+
+            ListTile(title: const Text('Contact'), onTap: () {}),
           ],
         ),
       );
@@ -98,3 +116,4 @@ class DrawerMenu extends StatelessWidget {
   }
 }
 
+*/

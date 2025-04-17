@@ -1,33 +1,23 @@
+# Flutter/Dart related
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+
 # iOS
 ios/Flutter/Generated.xcconfig
 ios/.generated/
 ios/Pods/
 ios/.symlinks/
 ios/Runner.xcworkspace
-ios/.dart_tool/
 
-# macOS
-macos/Flutter/GeneratedPluginRegistrant.swift
-macos/Pods/
-macos/.symlinks/
-macos/xcuserdata/
+# Android
+android/.gradle/
+android/app/build/
+android/.idea/
 
-# Windows
-windows/flutter/
-windows/.dart_tool/
-
-# Linux
-linux/flutter/
-linux/.dart_tool/
-
-# VS Code / IntelliJ / Android Studio
+# IDEs
 .vscode/
 .idea/
 *.iml
-
-# Others
-*.lock
-*.log
-*.tmp
-*.swp
-*.DS_Store

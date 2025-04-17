@@ -71,11 +71,27 @@ class _PortfolioHomeState extends State<PortfolioHome> {
                 )
                 : AppBar(
                   // Actual AppBar content after loading
-                  title: GlowingTitle(child: Text("✨ Sudip’s Lab 👨‍💻")),
+                  title: GestureDetector(
+                    onTap: () {
+                      // Navigate to PortfolioHomeScreen when tapped
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => PortfolioHome()),
+                      );
+                    },
+                    child: GlowingTitle(
+                        child: Center(
+                        child: Text(
+                          "✨ Sudip’s Lab 👨‍💻",
+                          textAlign: TextAlign.center,
+                        )
+                    )
+                    ),
+                  ),
                   elevation: 2,
-                  actions: isMobile ? null : const [DrawerMenu()],
+                  //actions: isMobile ? null : const [DrawerMenu()],
                 ),
-        drawer: isMobile ? const DrawerMenu() : null,
+        //drawer:  null, //isMobile ? const DrawerMenu() :
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -115,7 +131,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),  // Circle shape
             side: BorderSide(
-              color: Colors.transparent,  // Border color
+              color: Colors.blue,  // Border color
               width: 1,             // Border width
             ),
           ),

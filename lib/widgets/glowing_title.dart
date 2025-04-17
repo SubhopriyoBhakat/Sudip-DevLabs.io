@@ -45,34 +45,36 @@ class GlowingTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ShaderMask(
-      shaderCallback: (bounds) => const LinearGradient(
-        colors: [
-          Color(0xFF00FFC6), // Mint green
-          Color(0xFF00B2FF), // Sky blue
-        ],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      ).createShader(Rect.fromLTWH(0, 0, bounds.width, bounds.height)),
-      child: DefaultTextStyle.merge(
-        style: GoogleFonts.orbitron(
-          fontSize: 26,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-          shadows: const [
-            Shadow(
-              blurRadius: 20.0,
-              color: Color(0x9900FFC6), // ~60% opacity
-              offset: Offset(0, 0),
-            ),
-            Shadow(
-              blurRadius: 30.0,
-              color: Color(0x6600B2FF), // ~40% opacity
-              offset: Offset(0, 0),
-            ),
+    return Center(
+      child: ShaderMask(
+        shaderCallback: (bounds) => const LinearGradient(
+          colors: [
+            Color(0xFF00FFC6), // Mint green
+            Color(0xFF00B2FF), // Sky blue
           ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ).createShader(Rect.fromLTWH(0, 0, bounds.width, bounds.height)),
+        child: DefaultTextStyle.merge(
+          style: GoogleFonts.orbitron(
+            fontSize: 26,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            shadows: const [
+              Shadow(
+                blurRadius: 20.0,
+                color: Color(0x9900FFC6), // ~60% opacity
+                offset: Offset(0, 0),
+              ),
+              Shadow(
+                blurRadius: 30.0,
+                color: Color(0x6600B2FF), // ~40% opacity
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
+          child: child,
         ),
-        child: child,
       ),
     );
   }

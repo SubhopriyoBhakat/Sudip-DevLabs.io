@@ -134,6 +134,12 @@
       "languageVersion": "3.7"
     },
     {
+      "name": "font_awesome_flutter",
+      "rootUri": "file:///C:/Users/Sudip/AppData/Local/Pub/Cache/hosted/pub.dev/font_awesome_flutter-10.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "google_fonts",
       "rootUri": "file:///C:/Users/Sudip/AppData/Local/Pub/Cache/hosted/pub.dev/google_fonts-6.2.1",
       "packageUri": "lib/",
@@ -458,7 +464,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-04-16T21:46:14.134040Z",
+  "generated": "2025-04-17T07:13:02.204474Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///C:/FlutterDev/flutter",

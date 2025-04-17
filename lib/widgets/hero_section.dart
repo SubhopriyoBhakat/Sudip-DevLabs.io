@@ -233,46 +233,6 @@ class HeroSection extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 30),
-                    /*Wrap(
-                      spacing: 10,
-                      children: [
-                        IconButton(
-                          icon: Image.network(
-                            "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-                            height: 27,
-                            width: 27,  // Ensure fixed width for consistent size
-                          ),
-                          onPressed: () => _launchURL("https://www.linkedin.com/in/sudip-howlader"),
-                          tooltip: 'LinkedIn',
-                          hoverColor: Colors.black,
-                        ),
-
-                        IconButton(
-                          icon: Image.asset(
-                            'assets/images/gmail.png',
-                            height: 27,
-                            width: 27,  // Ensure fixed width for consistent size
-                          ),
-                          onPressed: () => _launchURL("mailto:sudipxtalks@gmail.com"),
-                          tooltip: 'Email',
-                          hoverColor: Colors.black,
-                        ),
-
-                        */
-                    /*IconButton(
-                          onPressed:
-                              () => _launchURL(
-                                "https://instagram.com/yourInstagramID",
-                              ),
-                          icon: Image.network(
-                            'https://cdn-icons-png.flaticon.com/512/174/174855.png',
-                            height: 27,
-                          ),
-                          tooltip: "Instagram",
-                        ),*//*
-                      ],
-                    ),*/
                   ],
                 ),
               ),
