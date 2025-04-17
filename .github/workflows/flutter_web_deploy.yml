@@ -1,0 +1,46 @@
+name: Build and Deploy Flutter Web App
+
+on:
+  push:
+    branches:
+      - main # Trigger when pushing to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Consider using ubuntu-latest for potentially faster builds
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Use the latest checkout action
+
+      # Step 2: Set up Flutter SDK
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.3' # Replace with your Flutter version
+
+      # Step 3: Select Flutter Channel (Optional but recommended for control)
+      - name: Select Flutter Channel
+        run: flutter channel stable
+
+      # Step 4: Enable Web Support (Optional, but good to ensure)
+      - name: Enable Web Support
+        run: flutter config --enable-web
+
+      # Step 5: Install Flutter dependencies
+      - name: Install dependencies
+        run: flutter pub get
+
+      # Step 6: Build the Flutter web app
+      - name: Build Flutter web
+        run: |
+          flutter build web --release
+
+      # Step 7: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.1.0
+        with:
+          branch: gh-pages # The branch to deploy to
+          folder: build/web # The folder containing the built Flutter web app
+          token: ${{ secrets.GITHUB_TOKEN }} # Use GitHub's token to push to GitHub Pages
